@@ -45,11 +45,9 @@ def hide():
 # hide window as new thread. Necessary in order to define timer used later
 objTimer = threading.Timer(0, hide);objTimer.start()
 
-parser = argparse.ArgumentParser(description="")
-
-parser.add_argument("-o", "--open", default=None, help="path to text file to open in notepad")
-
-args = parser.parse_args()
+objParser = argparse.ArgumentParser(description="")
+objParser.add_argument("-o", "--open", default=None, help="path to text file to open in notepad")
+args = objParser.parse_args()
 
 # open file in notepad if argument is given
 if args.open:
