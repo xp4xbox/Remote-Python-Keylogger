@@ -68,17 +68,15 @@ For more information please refer to the [wiki](https://github.com/xp4xbox/Puffa
 
 ### Compiling Program To .exe
 
-#### Py2Exe
+#### Py2Exe (recommmended)
 1. Install [Py2Exe](https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/).
 2. Run `python setup.py`
-
-Or refer to the [wiki](https://github.com/xp4xbox/Puffader/wiki/Compiling-To-.exe) for more information.
 
 #### cx_Freeze
 1. Install cx_Freeze via `pip install cx_freeze`.
 2. Run `python cx_freeze_setup.py build` and within the `build` folder you'll see the exe.
 
-The cx_Freeze [documentation](http://cx-freeze.readthedocs.io/en/latest/distutils.html#build-exe) has more specifics if you need to customize the setup parameters.
+Or refer to the [wiki](https://github.com/xp4xbox/Puffader/wiki/Compiling-To-.exe) for more information.
 
 ## Help
 
