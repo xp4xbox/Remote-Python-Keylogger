@@ -74,6 +74,13 @@ For more information please refer to the [wiki](https://github.com/xp4xbox/Puffa
 
 Or refer to the [wiki](https://github.com/xp4xbox/Puffader/wiki/Compiling-To-.exe) for more information.
 
+#### cx_Freeze (the easy way)
+1. Install cx_Freeze via `pip install cx_freeze`.
+2. Open up the command line and navigate to the folder where the Puffader.py script is.
+3. Assuming everything is well, run `cxfreeze Puffader.py --target-dir dist` with --target-dir being the destination you want it to be saved in. For more information, look at the following [link](http://cx-freeze.readthedocs.io/en/latest/script.html#script).
+
+As for the harder way, you can refer to the [wiki](http://cx-freeze.readthedocs.io/en/latest/distutils.html#distutils) which goes more in-depth about creating your own cx_Freeze setup.
+
 ## Help
 
 If you need any help at all, feel free to post a "help" issue.
